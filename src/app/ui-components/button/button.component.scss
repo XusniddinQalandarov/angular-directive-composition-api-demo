@@ -8,22 +8,41 @@
   font-size: 16px;
   transition: border-radius 0.2s ease-in-out;
   text-decoration: none;
+
+  --bg-color: gray;
+  --text-color: white;
+
   &:hover {
     opacity: 0.9;
     cursor: pointer;
   }
+
+
+  &.df-primary {
+    --bg-color: blue;
+    --text-color: white;
+  }
+
+  &.df-secondary {
+    --bg-color: green;
+    --text-color: white;
+  }
+
   &.df-solid {
     background-color: var(--bg-color);
     border-color: var(--bg-color);
     color: var(--text-color);
   }
+
   &.df-stroked {
     background-color: transparent;
     border-color: var(--bg-color);
     color: var(--bg-color);
   }
+
   &:disabled,
   &.disabled {
     opacity: 0.6;
+    cursor: not-allowed;
   }
 }
